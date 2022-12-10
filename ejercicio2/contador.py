@@ -2,7 +2,7 @@ import os
 
 def contador():
    # si el fichero no existe, se crea
-    if not os.path.exists("ejercicio/contador.txt"):
+    if not os.path.exists("ejercicio2/contador.txt"):
         with open("ejercicio2/contador.txt", "w") as f:
             f.write("0")
     # si el fichero existe, se abre y se lee
@@ -13,11 +13,14 @@ def contador():
         contador += 1
     elif input("inc o dec? ") == "dec":
         contador -= 1
+    else:
+        return contador
     # se escribe el nuevo valor en el fichero
     with open("ejercicio2/contador.txt", "w") as f:
         f.write(str(contador))
-    # se muestra el valor del contador
     print(contador)
+    # se muestra el valor del contador
+   
 contador()
 
 
